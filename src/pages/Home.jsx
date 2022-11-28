@@ -4,7 +4,7 @@ function Home({items, searchValue, setSearchValue, onChangeSearchInput, onAddToF
 
   const renderItems = () => {
     const folterItems = items.filter((item) => item.title.toLowerCase().includes(searchValue.toLowerCase()))
-    return (isLoading ? [...Array(folterItems.length)] : folterItems).map((item, i) => (
+    return (isLoading ? [...Array(5)] : folterItems).map((item, i) => (
         <Card 
           key={i} 
           onFavorite={(i) => onAddToFavorite(i)}
